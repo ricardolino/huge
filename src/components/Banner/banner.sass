@@ -1,0 +1,24 @@
+@import '../../assets/styles/mixins';
+
+.banner
+    position: relative
+
+    > .banner--title
+        position: absolute
+        transform: translate(-50%, -50%)
+        display: block
+        left: 50%
+        top: 50%
+        color: #FFF
+        font: 18vmin / 1 'HUGEAvantGarde'
+        letter-spacing: -0.06em
+        text-align: center
+        width: 100%
+
+        +mobile
+            font-size: 16vmin
+
+    > .banner--image
+        display: inline-block
+        width: 100%
+

@@ -1,0 +1,50 @@
+@import '../../assets/styles/mixins';
+
+.header
+    background: url('../../assets/images/HUGE-white.png') no-repeat left 20px center #ec008c
+    background-size: 40px
+    height: 60px
+    z-index: 1
+    width: 100%
+    transition: ease 0.3s
+    position: fixed
+
+    +mobile
+        background-image: none
+
+    &.-active
+        background-image: url('../../assets/images/HUGE-white.png')
+
+        > .menu--button
+            left: calc(100% - 40px)
+            background-image: url('../../assets/images/toggle-close.svg')
+
+            &::after
+                display: block
+
+    > .menu--button
+        +rpl
+        display: none
+        width: 40px
+        height: 40px
+        background: url('../../assets/images/toggle-open.svg') no-repeat center center transparent
+        border: none
+        outline: none
+        cursor: pointer
+        position: absolute
+        transition: ease 0.3s
+        left: 1%
+        top: 9px
+
+        &::after
+            content: ''
+            display: none
+            position: fixed
+            left: 0
+            right: 0
+            bottom: 0
+            top: 60px
+            background-color: rgba(0, 0, 0, 0.3)
+
+        +mobile
+            display: block

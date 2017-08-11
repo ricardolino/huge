@@ -1,0 +1,18 @@
+=font-face($family, $path, $svg, $weight, $style)
+    @font-face
+        font-family: $family
+        src: url('../fonts/#{$path}.eot')
+        src: url('../fonts/#{$path}.eot?#iefix') format('embedded-opentype'), url('../fonts/#{$path}.woff') format('woff'), url('../fonts/#{$path}.ttf') format('truetype'), url('../fonts/#{$path}.svg##{$svg}') format('svg')
+        font-weight: $weight
+        font-style: $style
+
+=rpl
+    display: inline-block
+    clear: both
+    text-indent: -99999em
+    text-align: left
+    overflow: hidden
+
+=mobile
+    @media screen and (max-width: 768px)
+        @content;

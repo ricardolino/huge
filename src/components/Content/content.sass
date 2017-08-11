@@ -1,0 +1,16 @@
+@import '../../assets/styles/mixins';
+
+.content
+    transition: ease 0.3s
+    margin-top: 60px
+
+    +mobile
+        &.-active
+            transform: translateX(80%)
+
+    > .content--text
+        padding: 5vh
+        font:
+            size: 5vmin
+            family: 'Galaxie'
+        line-height: 1.2
